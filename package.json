@@ -1,0 +1,13 @@
+{
+  "name": "jones-automation-exercise",
+  "version": "1.0.0",
+  "description": "Playwright automation for the Jones Automation exercise.",
+  "main": "automation.js",
+  "scripts": {
+    "start": "node automation.js",
+    "automation": "node automation.js"
+  },
+  "dependencies": {
+    "playwright": "^1.52.0"
+  }
+}
