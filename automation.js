@@ -1,4 +1,6 @@
 const { chromium } = require('playwright');
+const fs = require('fs');
+const path = require('path');
 
 const FORM_URL = 'https://test.netlify.app/';
 const SCREENSHOT_PATH = 'screenshots/before-submit.png';
@@ -31,6 +33,7 @@ async function run() {
 
   try {
     await fillLeadForm(page);
+    fs.mkdirSync(path.dirname(SCREENSHOT_PATH), { recursive: true });
     await page.screenshot({ path: SCREENSHOT_PATH, fullPage: true });
 
     await Promise.all([
